@@ -8,6 +8,7 @@ Conntennts
 
 * Fizz Buzz
 * Multiplication Table
+* Calculation Game
 
 Author
 ------
