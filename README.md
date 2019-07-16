@@ -9,6 +9,8 @@ Conntennts
 * Fizz Buzz
 * Multiplication Table
 * Calculation Game
+* List Files
+* Probability
 
 Author
 ------
