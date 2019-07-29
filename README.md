@@ -9,6 +9,7 @@ Conntennts
 * Fizz Buzz
 * Multiplication Table
 * Calculation Game
+* Rock, Paper, Scissors
 * List Files
 * Probability
 * Calculation Game on the web
