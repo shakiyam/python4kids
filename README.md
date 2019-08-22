@@ -11,7 +11,7 @@ Conntennts
 * Calculation Game
 * Rock, Paper, Scissors
 * Probability
-* List Files
+* Thumbnail Maker
 * Calculation Game on the web
 * BBS
 
