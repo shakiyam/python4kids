@@ -14,6 +14,7 @@ Conntennts
 * Thumbnail Maker
 * Calculation Game on the web
 * BBS
+* Face Detection
 
 Author
 ------
