@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Face Recognition</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <h1 class="navbar-brand">Face Recognition</h1>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="list-group">
+        {% for image_path, predicted_label, confidence, image_label in test_results %}
+          <div class="list-group-item">
+            <div class="d-flex flex-row">
+              <div class="p-1 bd-highlight">
+                  <img src="{{ image_path }}" width="100px" height="100px">
+              </div>
+              <div class="p-1 bd-highlight">
+                <div class="d-flex flex-column">
+                  {% if predicted_label == image_label %}
+                    <div>Predicted: <span style="color:green">{{ predicted_label }}</span></div>
+                  {% else  %}
+                    <div>Predicted: <span style="color:red">{{ predicted_label }}</span></div>
+                  {% endif %}
+                  {% if confidence < 30 %}
+                    <div>Confidence: <span style="color:green">{{ '%3.1f'|format(confidence) }}</span></div>
+                  {% else  %}
+                    <div>Confidence: <span style="color:red">{{ '%3.1f'|format(confidence) }}</span></div>
+                  {% endif %}
+                  <div>Answer: {{ image_label }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

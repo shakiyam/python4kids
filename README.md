@@ -15,6 +15,7 @@ Conntennts
 * [Calculation Game on the web](https://qiita.com/shakiyam/items/3945a224a8774c332220)
 * [BBS](https://qiita.com/shakiyam/items/c3aa6425ff42b75d3310)
 * [Face Detection](https://qiita.com/shakiyam/items/110b4819b12124587d80)
+* Face Recognition
 
 Author
 ------
